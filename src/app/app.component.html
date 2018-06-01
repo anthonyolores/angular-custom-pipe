@@ -1,0 +1,12 @@
+<div>
+  <input type="number" value="0" [(ngModel)]="operand1" />
+  <input type="number" value="0" [(ngModel)]="operand2" />
+<ul>
+    <li 
+    *ngFor="let operator of operators">
+    {{operand1 + ' ' + operator + ' ' + operand2 + ' = ' + 
+    (result | Calculate : operand1 : operand2 : operator)}}
+  </li>
+</ul>
+
+</div>
